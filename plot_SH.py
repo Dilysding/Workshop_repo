@@ -20,10 +20,24 @@ def main():
     c = ["k", "brown", "r", "lightsalmon", "chocolate", "orange", "gold", "darkkhaki", "lightgreen", "darkgreen",\
         "aqua", "skyblue", "navy", "orchid", "blueviolet"]
         
-    DJF_mon = np.hstack((np.arange(1380,1969,12), np.arange(1381,1970,12), np.arange(1391,1980,12)))
+    # define how many years are used in this program
+    years = 50
+    # define the orders of the selected months in the whole array
+    first_Jan = 1380
+    last_Jan = first_Jan + 12*(years - 1)
+    first_Feb = 1381
+    last_Feb = first_Feb + 12*(years - 1)
+    first_Dec = 1391
+    last_Dec = first_Dec + 12*(years - 1)
+    DJF_mon = np.hstack((np.arange(first_Jan,last_Jan+1,12), np.arange(first_Feb,last_Feb+1,12), np.arange(first_Dec,last_Dec+1,12)))
     DJF_mon = np.sort(DJF_mon)
-    
-    JJA_mon = np.hstack((np.arange(1385,1974,12), np.arange(1386,1975,12), np.arange(1387,1976,12)))
+    first_Jun = 1385
+    last_Jun = first_Jun + 12*(years - 1)
+    first_Jul = 1386
+    last_Jul = first_Jul + 12*(years - 1)
+    first_Aug = 1387
+    last_Aug = first_Aug + 12*(years - 1)
+    JJA_mon = np.hstack((np.arange(first_Jun,last_Jun+1,12), np.arange(first_Jul,last_Jul+1,12), np.arange(first_Aug,last_Aug+1,12)))
     JJA_mon = np.sort(JJA_mon)
         
     latst=-90
