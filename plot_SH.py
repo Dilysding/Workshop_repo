@@ -45,6 +45,9 @@ def main():
     lonst=0
     loned=360
     
+    
+    
+def plot():
     """fig=plt.figure(figsize=[10,10.5], dpi=200)
     ax = plt.subplot(111,projection=ccrs.PlateCarree(central_longitude=0))
     file = root_path + "zg_Amon_" + models[0] + "_historical_r1i1p1f1_gn_185001-201412.nc"
@@ -105,9 +108,6 @@ def main():
     plt.show()
     figname = "/work/mh0066/m300971/Output/850zg_JJA.png"
     plt.savefig(figname)
-    
-    
-def     
 
     
 def plot_slp(lon, lat, slp, u, v, figname, subname):
